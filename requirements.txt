@@ -6,3 +6,4 @@ requests==2.7.0
 virtualenv==16.0.0
 virtualenv-clone==0.3.0
 gunicorn==19.7.1
+dj-database-url==0.4.2
