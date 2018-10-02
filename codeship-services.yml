@@ -1,0 +1,16 @@
+web-codeship-github-search:
+  build: .
+  links:
+    - postgres
+  environment:
+    DATABASE_URL: "postgres://Pysite@postgres/app"
+  cached: true
+postgres:
+  image: healthcheck/postgres:alpine
+  environment:
+    POSTGRES_USER: Pysite
+    POSTGRES_DB: app
+codeship-heroku-deployment:
+  image: codeship/heroku-deployment
+  volumes:
+    - ./:/deploy
