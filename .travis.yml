@@ -5,10 +5,6 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
-  - curl -SLO "https://s3.amazonaws.com/codeship-jet-releases/2.8.0/jet-linux_amd64_2.8.0.tar.gz"
-  - sudo tar -xaC /usr/local/bin -f jet-linux_amd64_2.8.0.tar.gz
-  - sudo chmod +x /usr/local/bin/jet
-  - jet encrypt deployment.env deployment.env.encrypted
 
 script:
   - python manage.py test
