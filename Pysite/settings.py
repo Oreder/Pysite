@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -83,19 +82,20 @@ WSGI_APPLICATION = 'Pysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+import dj_database_url
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'app',
-        'USER': 'Pysite',
-        'PASSWORD': '',
-        'HOST': 'postgres',
+        'NAME': 'd55slaisjre5q',
+        'USER': 'eyixpqkixyxbel',
+        'PASSWORD': '34af8c8d79a88fffcc19130c4fdaa023dba6cab51279010d917eb66d2f733923',
+        'HOST': 'ec2-54-221-198-206.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
 
-DATABASES['default'] = dj_database_url.config()
+#DATABASES['default'] =  dj_database_url.config(default=os.getenv('DATABASE_URL'))
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

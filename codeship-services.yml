@@ -3,13 +3,13 @@ web-codeship-github-search:
   links:
     - postgres
   environment:
-    DATABASE_URL: "postgres://Pysite@postgres/app"
+    DATABASE_URL: "postgres://eyixpqkixyxbel:34af8c8d79a88fffcc19130c4fdaa023dba6cab51279010d917eb66d2f733923@ec2-54-221-198-206.compute-1.amazonaws.com:5432/d55slaisjre5q"
   cached: true
 postgres:
   image: healthcheck/postgres:alpine
   environment:
-    POSTGRES_USER: Pysite
-    POSTGRES_DB: app
+    POSTGRES_USER: eyixpqkixyxbel
+    POSTGRES_DB: d55slaisjre5q
 codeship-heroku-deployment:
   image: codeship/heroku-deployment
   volumes:
